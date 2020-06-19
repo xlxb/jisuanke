@@ -1,0 +1,41 @@
+Working Directory：工作区——.git所在的文件夹
+stage/index:暂存区
+Repository：本地仓库
+Remote:远程仓库
+
+
+git status:查看状态，查看哪些文件更改了，以及提示你可以进行的操作
+建议做什么操作前都用一下这个
+git config --global core.quotepath false ：使中文路径可以正常显示
+
+
+git add <file>...:把工作区的改变添加到暂存区（stage操作）
+git restore --staged <file>... :把工作区恢复成暂存区的样子（unstage操作，stage的逆操作）
+Git diff :比较文件不同
+git commit -m ”<一些注释>”:把暂存区的内容提交到仓库
+一旦被commit，就相当于永久备份，随时可以恢复到某个commit过的版本
+
+git pull:把远程仓库的内容更新到本地仓库
+Git push:把本地仓管更新到远程仓库上去，一般push前要pull，避免冲突
+
+
+切换版本
+git reset --hard HEAD:把工作区恢复成本地版本库的最新版本
+git reset --hard HEAD^:把工作区恢复成本地版本库的上一版本，多少个’^’就往前推几个版本，window的控制台需要变成HEAD”^”,HEAD”^^”.......，git Bash不需要
+git reset --hard HEAD~n:把工作区恢复成版本库往前推n个版本，
+git reset --soft HEAD:把暂存区恢复成版本库的最新版本
+Git reset --hard <版本号的前几位，足以区分就行> :将工作区恢复成任意版本（版本号是git log 后出现的十六进制序列）
+
+Git log：查看提交日志 参数--pretty=oneline可以查看简易信息
+Git log只能看到之前的版本，所以你恢复到之前的某个版本后，就看不到之后的版本了
+这个时候可以用
+Git reflog
+不仅可以看到commit操作，也可以看到reset操作
+
+
+git branch <新分支名>：创建新分支
+Git checkout/switch <分支名>：切换到分支
+Git checkout -b <新分支名> / Git switch -c <新分支名>：创建并切换到新分支
+Git branch:查看所有分支，带’*’号的是当前分支，即HEAD指向的分支
+Get merge <分支名>：合并当前分支和某分支
+Git log --graph：可以看分支合并图
