@@ -1,0 +1,23 @@
+<html>
+<head>
+    <style>
+        #food > div{border: 1px solid red;}
+        /* 子选择器 */
+        #food div{color: blue;}
+        /* 后代选择器 */
+        /* 子选择器和后代选择器的差别就在于，>符号作用于元素的第一代后代，空格作用于元素的所有后代。 */
+    </style>
+</head>
+<body>
+    <div id="food">
+        <div>水果
+            <div>苹果</div>
+            <div>香蕉</div>
+        </div>
+        <div>蔬菜
+            <div>青椒</div>
+            <div>白菜</div>
+        </div>
+    </div>
+</body>
+</html>
