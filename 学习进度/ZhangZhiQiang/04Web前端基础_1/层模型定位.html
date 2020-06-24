@@ -1,0 +1,61 @@
+<html>
+<head>
+    <style type="text/css">
+    div {
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;   
+    }
+    .absolute {
+        position: absolute;
+        right: 200px;
+        top: 100px;
+    }
+
+    .relative {
+        position: relative;
+        left: 100px;
+        top: 100px;
+    }
+    .fixed {
+        position: fixed;
+        right: 100px;
+        top: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div class="absolute"> 
+        如果不存在，则相对于&lt;body&gt;&lt;/body&gt;移动，即参照浏览器，不会因为分辨率的变化而变化。<br/>
+        不占据空间<br/>
+        position: absolute;
+        right: 200px;
+        top: 100px;</div>
+    <div style="height: 800px;width: 800px;position: relative; right: 0; top: 0;">
+        <div class="absolute"> 
+            div1<br/>
+            定位相对于最近的已定位祖先<br/>
+            不占据空间<br/>
+            position: absolute;
+            right: 200px;
+            top: 100px;</div>
+        <div>div2</div>
+        <div class="relative">
+            div3<br/>
+            占据原位置空间<br/>
+            定位是相当于原位置<br/>
+            position: relative;
+            left: 100px;
+            top: 100px;
+        </div>
+        <div>div4</div>
+        <div class="fixed">
+            不占据空间<br/>
+            不受页面滚动影响<br/>
+            position: fixed;
+            right: 100px;
+            top: 200px;
+        </div>
+    </div>
+</body>
+</html>
