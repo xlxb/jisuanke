@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body>
+    <p id="ip">你可以把我隐藏，也可以让我显示哦~</p>
+    <input type="button" id="ihide" value="hide">
+    <input type="button" id="ishow" value="show">
+    <script type="text/javascript">
+        var op = document.getElementById("ip");
+        var inp = document.getElementsByTagName("input");
+        inp[0].onclick = function () {
+            op.style.display = "none"; // 隐藏
+        }
+        inp[1].onclick = function () {
+            op.style.display = "block";
+        }
+    </script>
+</body>
+</html>

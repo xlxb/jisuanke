@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>葫芦兄弟</title>
+</head>
+<body>
+    <ul id="father">
+        <li>二娃</li>
+        <li>三娃</li>
+        <li>四娃</li>
+        <li>五娃</li>
+        <li>六娃</li>
+        <li>七娃</li>
+    </ul>
+    <input type="button" id="add-btn" value="add">
+    <script type="text/javascript">
+        function addnode(){
+            var fnode = document.getElementById("father");
+            var newnode = document.createElement("li");
+            newnode.innerHTML = "大娃";
+            fnode.insertBefore(newnode,fnode.childNodes[0]);
+        }
+        var add = document.getElementById("add-btn");
+        add.onclick = addnode;
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>style</title>
+</head>
+<body>
+    <h2 id="ih">JavaScript</h2>
+    <input type="button" id="inp" value="click">
+    <script type="text/javascript">
+        var inp = document.getElementById("inp");
+        inp.onclick = function () {
+            var oh = document.getElementById("ih");
+            oh.style.color = "red";
+            oh.style.width = "300px";
+            oh.style.backgroundColor = "#CCC";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>get/setattribute</title>
+</head>
+<body>
+    <p id="pid" title="JavaScript">JavaScript</p>
+    <button id="btn">click</button>
+    <script type="text/javascript">
+        var btn = document.getElementById("btn");
+        btn.onclick = attr;
+        function attr() {
+            var pid = document.getElementById("pid");
+            alert(pid.getAttribute("id"));
+            alert(pid.getAttribute("title"));
+            pid.setAttribute("title", "hello");
+            alert(pid.getAttribute("title"));
+        }
+    </script>
+</body>
+</html>

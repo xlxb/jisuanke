@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>clearInterval</title>
+</head>
+<body>
+    <input type="text" id="clock">
+    <input type="button" id="istart" value="Start">
+    <input type="button" id="istop" value="Stop">
+    <script type="text/javascript">
+        var setid;
+        var time;
+        var attime;
+        function clock(){
+            time = new Date();
+            attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+            document.getElementById("clock").value = attime;
+        }
+        var istart = document.getElementById("istart");
+        istart.onclick = function(){
+            setid = setInterval(clock,100);
+        }
+        var istop = document.getElementById("istop");
+        istop.onclick = function(){
+            clearInterval(setid);
+        }
+    </script>
+</body>
+</html>

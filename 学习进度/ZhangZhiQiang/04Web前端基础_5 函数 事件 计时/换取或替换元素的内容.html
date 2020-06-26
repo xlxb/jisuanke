@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML/innerText</title>
+</head>
+<body>
+    <p>JavaScript</p>
+    <p>JavaScript</p>
+    <input type="button" id="inp" value="click">
+    <script type="text/javascript">
+        var inp = document.getElementById("inp");
+        inp.onclick = function(){
+            var ip = document.getElementsByTagName("p");
+            alert(ip[0].innerHTML);
+            ip[0].innerHTML = "<i>hello</i>";
+            ip[1].innerText = "<i>hello</i>";
+        }
+    </script>
+</body>
+</html>

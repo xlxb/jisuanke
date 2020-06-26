@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>confirm</title>
+</head>
+<body>
+    <input id="input" type="button" value="点击我">
+    <script type="text/javascript">
+        function rec(){
+            var message = confirm("Do you like me?");
+            if(message == true)
+            {
+                document.write("么么哒！~");
+            }
+            else
+            {
+                document.write("泥奏凯！");
+            }
+        }
+        var inp = document.getElementById("input");
+        inp.onclick = rec;
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>onclick</title>
+</head>
+<body>
+    <p id="pid">JavaScript</p>
+    <button id="btn">click</button>
+    <script type="text/javascript">
+        var btn = document.getElementById('btn');
+        btn.onclick = hello;
+        function hello(){
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "Hello!";
+        }
+    </script>
+</body>
+</html>
