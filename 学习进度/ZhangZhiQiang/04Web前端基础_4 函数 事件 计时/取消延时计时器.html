@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>set/clearTimeout</title>
+</head>
+<body>
+<input type="text" id="count">
+<input type="button" id="istart" value="Start">
+<input type="button" id="istop" value="Stop">
+<script type="text/javascript">
+    var seti;
+    var num = 0;
+    function startCount(){
+        document.getElementById('count').value = num;
+        num = num + 1;
+        seti = setTimeout("startCount()", 1000);
+    }
+    var istart = document.getElementById("istart");
+    istart.onclick = function(){
+        startCount();
+    }
+    var istop = document.getElementById("istop");
+    istop.onclick = function(){
+        clearTimeout(seti);
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval</title>
+</head>
+<body>
+    <input type="text" id="clock" size="50">
+    <script type="text/javascript">
+        function clock(){
+            var time = new Date();
+            var attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+			document.getElementById("clock").value = attime;            
+        }
+        setInterval(clock,100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>focus/blur</title>
+</head>
+<body>
+    <p id="pid">JavaScript</p>
+    <input id="input">
+    <script type="text/javascript">
+        var inp = document.getElementById("input");
+        inp.onfocus = focus;
+        inp.onblur = blur;
+        function focus() {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "focus";
+        }
+        function blur() {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "blur";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>up/down</title>
+</head>
+<body>
+    <p id="pid">JavaScript</p>
+    <button id="btn">click</button>
+    <script type="text/javascript">
+        var btn = document.getElementById("btn");
+        btn.onmousedown = down;
+        btn.onmouseup = up;
+        function up() {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "up";
+        }
+        function down() {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "down";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>document.getElementsByTagName</title>
+</head>
+<body>
+    <p>Hello</p>
+    <p>Do you like</p>
+    <p>JavaScript</p>
+    <script type="text/javascript">
+        var p = document.getElementsByTagName("p");
+        for(i = 0; i < p.length; ++i) {
+            alert(p[i].innerHTML);
+        }
+    </script>
+</body>
+</html>

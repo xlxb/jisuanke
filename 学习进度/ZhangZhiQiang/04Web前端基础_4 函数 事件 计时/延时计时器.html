@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+</head>
+<body>
+    <input type="text" id="inum">
+    <input type="button" id="ialt" value="Start">
+    <script type="text/javascript">
+        var inum = document.getElementById("inum");
+        var ialt = document.getElementById("ialt");
+        ialt.onclick = function () {
+            setTimeout("inum.value = 1", 1000);
+            setTimeout("inum.value = 2", 2000);
+            setTimeout("inum.value = 3", 3000);
+            setTimeout("inum.value = 4", 4000);
+            setTimeout("alert('666')", 5000);
+        }
+    </script>
+</body>
+</html>

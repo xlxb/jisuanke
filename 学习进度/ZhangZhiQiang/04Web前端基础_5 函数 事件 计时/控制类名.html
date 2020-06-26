@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>className</title>
+    <style>
+        body{
+            font-size: 16px;
+        }
+        .p1{
+            border: 1px solid #eee;
+            width: 250px;
+            height: 40px;
+            background-color: #ccc;
+            color: red;
+        }
+        .p2{
+            border: 1px solid #ccc;
+            width: 250px;
+            height: 40px;
+            background-color: #5C5;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p> 小蒜的空样式 </p>
+    <input type="button" value="add class">
+    <p class="p1"> 小蒜的第一个样式 </p>
+    <input type="button" value="modify class">
+    <script type="text/javascript">
+        var op = document.getElementsByTagName("p");
+        var inp = document.getElementsByTagName("input");
+        inp[0].onclick = function () {
+            op[0].className = "p1";
+        }
+        inp[1].onclick = function () {
+            op[1].className = "p2";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>select/change</title>
+</head>
+<body>
+    <p id="pid">JavaScript</p>
+    <input id="input" value="change me~">
+    <script type="text/javascript">
+        var inp = document.getElementById("input");
+        inp.onselect = select;
+        inp.onchange = change;
+        function select() {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "select";
+        }
+        function change() {
+            var pid = document.getElementById("pid");
+            pid.innerHTML = "change";
+        }
+    </script>
+</body>
+</html>
