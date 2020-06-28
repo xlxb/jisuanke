@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">  
+               <title>页面尺寸</title>
+                  <script type="text/javascript">
+                        // window.onload = function () {
+                        //    var text = document.getElementById("text");
+                        //    var wclient = document.documentElement.clientWidth;
+                        //    var hclient = document.documentElement.clientHeight;
+                        //    var wscroll = document.documentElement.scrollWidth;
+                        //    var hscroll = document.documentElement.scrollHeight;
+                        //    var woffset = document.documentElement.offsetWidth;
+                        //    var hoffset = document.documentElement.offsetHeight;
+                        //    alert ("窗口的当前宽度 clientWidth ：" + wclient
+                        //       + " 窗口的当前高度 clientHeight ：" + hclient
+                        //       + " scrollWidth：" + wscroll
+                        //       + " scrollHeight：" + hscroll
+                        //       + " offsetWidth：" + woffset
+                        //       + " offsetHeight：" + hoffset);
+                        // }
+                        setInterval(ff,100);
+                        function ff() {
+                           var text = document.getElementById("text");
+                           var wclient = document.documentElement.clientWidth;
+                           var hclient = document.documentElement.clientHeight;
+                           var wscroll = document.documentElement.scrollWidth;
+                           var hscroll = document.documentElement.scrollHeight;
+                           var woffset = document.documentElement.offsetWidth;
+                           var hoffset = document.documentElement.offsetHeight;
+                           var node = document.getElementById("text");
+                           node.innerHTML = "窗口的当前宽度 clientWidth ：" + wclient + "<br>"
+                              + " 窗口的当前高度 clientHeight ：" + hclient + "<br>"
+                              + " scrollWidth：" + wscroll + "<br>"
+                              + " scrollHeight：" + hscroll + "<br>"
+                              + " offsetWidth：" + woffset + "<br>"
+                              + " offsetHeight：" + hoffset + "<br>"
+                              + " scrollTop:    " + document.documentElement.scrollTop;
+                        }
+                        
+                  </script>
+               </head>
+      <body>
+         <div id="text"></div>         
+      </body>
+   </html>

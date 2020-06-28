@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>显示子节点</title>
+    <script type="text/javascript">
+        function show_element(ev) {
+            var node = document.elementFromPoint(ev.x, ev.y);
+            
+            var message_node = document.getElementById("message");
+            message_node.innerHTML = children_string(node, 0);
+        }
+        document.onclick = show_element;
+        function children_string(root_node, depth) {
+            var message = "";
+            if (!root_node) {
+                return;
+            }
+            for (var i = 0; i < depth; ++i) {
+                message += "&nbsp;&nbsp;&nbsp;&nbsp;"
+            }
+            if (root_node.nodeType == 3) {
+                message += "text:" + root_node.nodeValue + "; ";
+            }
+            else if (root_node.nodeType == 1) {
+                message += "&lt;" + root_node.nodeName + "&gt;";
+            }
+            else {
+                message += "nodeName:" + root_node.nodeName
+                    + "; nodeType:" + root_node.nodeType
+                    + "; innnerHTML:" + root_node.innerHTML
+                    + "; innnerText:" + root_node.innerText
+                    + "; nodeValue:" + root_node.nodeValue
+                    + "; ";
+            }
+            message += "<br>";
+            var childNodes = root_node.childNodes;
+            for (var i = 0; i < childNodes.length; i++) {
+                message += children_string(childNodes[i], depth + 1);
+            }
+            return message;
+        }
+    
+    </script>
+</head>
+<body>
+    <div style="position: fixed; right: 10px; top: 10px; border: 1px solid black;">
+        <p id="message"></p>
+    </div>
+    <div id="text">
+        <ul id="father">
+            文本
+            <li>大娃</li>
+            <li>二娃</li>
+            <li>三娃</li>
+            <li>四娃</li>
+            <li>五娃</li>
+            <li>六娃</li>
+            <li>七娃</li>
+        </ul>
+    </div>
+</body>
+
+
+</html>

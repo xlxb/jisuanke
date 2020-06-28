@@ -13,9 +13,11 @@
     </style>
 </head>
 <body>
+    <div id="message" style="float: right;"></div>
     <div id="box"></div>
     <script type="text/javascript">
         var oDiv = document.getElementById("box");
+        var messageDiv = document.getElementById("message");
         oDiv.onmousedown = function(ev) {
             var oEvent = ev;
             var disX = oEvent.clientX - oDiv.offsetLeft;
@@ -24,6 +26,12 @@
                 oEvent = ev;
                 oDiv.style.left = oEvent.clientX - disX + "px";
                 oDiv.style.top = oEvent.clientY - disY + "px";
+                var message = "clienxX:" + oEvent.clientX + "<br>"
+                    +"clientY:"+oEvent.clientY + "<br>" 
+                    +"offsetLeft:" + oDiv.offsetLeft + "<br>"
+                    +"offsetTop:" + oDiv.offsetTop + "<br>"
+                    ;
+                messageDiv.innerHTML = message;
             }
             document.onmouseup = function(){
                 document.onmousemove = null;
